@@ -40,11 +40,9 @@ python main.py "sample fnol/manual_review_fnol.txt"
   "reasoning": "Standard processing applicable."
 }
 ```
-Explanation
-All mandatory FNOL fields were successfully extracted
+### ✅ Explanation
 
-No missing fields detected during validation
-
-Claim does not meet fast-track, injury, or investigation criteria
-
-Routed to Standard Claims Queue using deterministic rules
+- All mandatory FNOL fields were successfully extracted  
+- No missing fields detected during validation  
+- Claim does not meet fast-track, injury, or investigation criteria  
+- Routed to **Standard Claims Queue** using deterministic rules  
