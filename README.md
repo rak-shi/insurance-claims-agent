@@ -130,7 +130,7 @@ cd insurance-claims-agent
 Create Virtual Environment
 python -m venv venv
 
-
+```
 Activate (Windows):
 
 venv\Scripts\activate
@@ -139,11 +139,11 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 4️⃣ Configure Environment Variables
-
+```
 Create a .env file in the project root:
 
 GROQ_API_KEY=your_groq_api_key_here
-
+```
 ▶️ Running the Agent (Exact Commands)
 
 ⚠️ The folder name contains a space (sample fnol), so paths must be wrapped in quotes.
@@ -232,4 +232,5 @@ All business decisions remain rule-driven for explainability and safety.
 - fasttrack_fnol.txt → Damage < 25,000 → Fast-track
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
+
 
