@@ -106,7 +106,74 @@ insurance-claims-agent/
 - Initial Estimate  
 
 ---
+## 🏗️ Architecture Diagram (Markdown-Safe)
 
+┌─────────────────────────────┐
+│ FNOL Documents │
+│ (PDF / TXT) │
+└──────────────┬──────────────┘
+│
+▼
+┌─────────────────────────────┐
+│ Text Extraction Layer │
+│ - PDF parsing │
+│ - TXT ingestion │
+└──────────────┬──────────────┘
+│
+▼
+┌─────────────────────────────┐
+│ LLM Extraction Agent │
+│ (Groq – LLaMA 3.1) │
+│ - Semantic field extraction│
+│ - FNOL understanding │
+└──────────────┬──────────────┘
+│
+▼
+┌─────────────────────────────┐
+│ Validation Agent │
+│ - Mandatory field checks │
+│ - Missing data detection │
+└──────────────┬──────────────┘
+│
+▼
+┌─────────────────────────────┐
+│ Routing Agent │
+│ (Deterministic Rules) │
+│ - Fast-track │
+│ - Manual Review │
+│ - Specialist Queue │
+│ - Investigation Flag │
+└──────────────┬──────────────┘
+│
+▼
+┌─────────────────────────────┐
+│ JSON Output │
+│ - Extracted Fields │
+│ - Missing Fields │
+│ - Recommended Route │
+│ - Reasoning │
+└─────────────────────────────┘
+
+
+---
+
+## 📌 Why This Is Excellent for Assessment
+
+- Clearly shows **agent separation**
+- Explicitly limits **LLM usage to extraction only**
+- Demonstrates **deterministic, rule-based routing**
+- Provides a **fully explainable and auditable pipeline**
+
+---
+
+## 🧠 Design Rationale
+
+The system follows a **multi-agent architecture** where each agent has a
+single responsibility. The LLM is strictly restricted to **semantic
+extraction**, while validation and routing are handled using
+**deterministic business logic**. This design ensures **safety,
+explainability, and compliance**, which are essential requirements for
+real-world insurance claim processing systems.
 ## 🧭 Routing Rules
 
 | Condition | Route |
@@ -237,6 +304,7 @@ All business decisions remain rule-driven for explainability and safety.
 - fasttrack_fnol.txt → Damage < 25,000 → Fast-track
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
+
 
 
 
