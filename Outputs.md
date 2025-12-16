@@ -1,13 +1,13 @@
-## 🧾 Sample Execution & Output 
+##  Sample Execution & Output 
 ## Standard Claims Queue (Manual Review FNOL)
 
-### ▶️ Command Executed
+###  Command Executed
 
 ```bash
 python main.py "sample fnol/manual_review_fnol.txt"
 ```
 
-📤 Output (JSON)
+Output (JSON)
 ```
 {
   "extractedFields": {
@@ -41,7 +41,7 @@ python main.py "sample fnol/manual_review_fnol.txt"
   "reasoning": "Standard processing applicable."
 }
 ```
-### ✅ Explanation
+### Explanation
 
 - All mandatory FNOL fields were successfully extracted  
 - No missing fields detected during validation  
