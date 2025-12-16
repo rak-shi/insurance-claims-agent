@@ -252,6 +252,25 @@ All business decisions remain rule-driven for explainability and safety.
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
 
+## 📊 Outputs & Execution Results
+
+All sample executions and JSON outputs for different FNOL scenarios are documented in  
+📁 **[`Outputs.md`](./Outputs.md)**.
+
+The outputs demonstrate the following system behaviors:
+
+- Successful extraction of mandatory FNOL fields using the LLM extraction agent  
+- Detection of missing or incomplete fields through deterministic validation logic  
+- Rule-based routing of claims into:
+  - **Fast-track**
+  - **Standard Claims Queue**
+  - **Specialist Queue (Injury)**
+  - **Investigation Flag (Fraud Indicators)**
+  - **Manual Review** for blank or incomplete FNOLs  
+- Clear, explainable reasoning for each routing decision  
+- Safe fallback to manual review when automation confidence is insufficient  
+
+> This separation keeps the README concise while ensuring full transparency and reproducibility through `Outputs.md`.
 
 
 
