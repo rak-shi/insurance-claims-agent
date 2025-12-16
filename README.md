@@ -233,47 +233,6 @@ It represents a lightweight textual counterpart to enterprise multi-agent system
 - LangChain / LangGraph orchestration  
 
 ---
-## 🧾 Sample Execution & Output
-
-### ▶️ Command Executed
-
-```bash
-python main.py "sample fnol/manual_review_fnol.txt"
-```
-```
-{
-  "extractedFields": {
-    "policy_number": "PN12345",
-    "policyholder_name": "John Doe",
-    "effective_dates": "2022-01-01 - 2023-01-01",
-    "incident_date": "2023-03-15",
-    "incident_time": "14:30",
-    "incident_location": "123 Main St",
-    "incident_description": "Vehicle collision",
-    "claimant": "John Doe",
-    "third_parties": "Jane Smith",
-    "contact_details": {
-      "Phone": "123-456-7890",
-      "Email": "johndoe@example.com"
-    },
-    "asset_type": "Vehicle",
-    "asset_id": "VEH12345",
-    "estimated_damage": "$10,000",
-    "claim_type": "Property Damage",
-    "attachments": [
-      {
-        "File Name": "incident_report.pdf",
-        "File Type": "PDF"
-      }
-    ],
-    "initial_estimate": "$5,000"
-  },
-  "missingFields": [],
-  "recommendedRoute": "Standard Claims Queue",
-  "reasoning": "Standard processing applicable."
-}
-
-```
 
 ## 🎤 One-Line Summary
 
@@ -292,6 +251,7 @@ All business decisions remain rule-driven for explainability and safety.
 - fasttrack_fnol.txt → Damage < 25,000 → Fast-track
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
+
 
 
 
