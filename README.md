@@ -177,54 +177,52 @@ python main.py "sample fnol/ACORD-Automobile-Loss-Notice-12.05.16.pdf"
   "reasoning": "Estimated damage below 25,000."
 }
 ```
+## 🧪 Demo FNOL Files
 
-🧪 Demo FNOL Files
-FNOL File	Expected Route
-manual_review_fnol.txt	Manual Review
-fasttrack_fnol.txt	Fast-track
-injury_fnol.txt	Specialist Queue
-investigation_fnol.txt	Investigation Flag
-Blank ACORD PDF	Manual Review
-🔐 Safety & Explainability
+| FNOL File | Expected Route |
+|---------|---------------|
+| `manual_review_fnol.txt` | Manual Review |
+| `fasttrack_fnol.txt` | Fast-track |
+| `injury_fnol.txt` | Specialist Queue |
+| `investigation_fnol.txt` | Investigation Flag |
+| Blank ACORD PDF | Manual Review |
 
-LLM never makes routing decisions
+---
 
-Blank FNOLs are intentionally routed to manual review
+## 🔐 Safety & Explainability
 
-All decisions are deterministic and auditable
+- LLM never makes routing decisions  
+- Blank FNOLs are intentionally routed to manual review  
+- All decisions are deterministic and auditable  
+- Robust JSON parsing prevents silent failures  
 
-Robust JSON parsing prevents silent failures
+---
 
-📖 Alignment with Autonomous Claim Processing
+## 📘 Alignment with Autonomous Claim Processing
 
 This project aligns with modern agentic AI claim processing systems by:
 
-Automating FNOL data extraction
+- Automating FNOL data extraction  
+- Performing claims triage via autonomous agents  
+- Ensuring compliance through rule-based decisions  
 
-Performing claims triage via autonomous agents
+It represents a lightweight textual counterpart to enterprise multi-agent systems such as **Akira AI**.
 
-Reducing manual workload for simple claims
+---
 
-Ensuring compliance through rule-based decisions
+## 🚀 Future Enhancements
 
-It represents a lightweight textual counterpart to enterprise multi-agent systems such as Akira AI.
+- OCR support for scanned PDFs  
+- Vision agent for damage estimation  
+- Confidence scoring  
+- Batch FNOL processing  
+- LangChain / LangGraph orchestration  
 
-🚀 Future Enhancements
+---
 
-OCR support for scanned PDFs
+## 🎤 One-Line Summary
 
-Vision agent for damage estimation
-
-Confidence scoring
-
-Batch FNOL processing
-
-LangChain / LangGraph orchestration
-
-🎤 One-Line Summary
-
-A hybrid LLM + rule-based autonomous insurance claims agent that extracts FNOL data, validates completeness, and routes claims with explainable decisions.
-## Approach
+**A hybrid LLM + rule-based autonomous insurance claims agent that extracts FNOL data, validates completeness, and routes claims with explainable decisions.**
 
 This solution uses a hybrid architecture:
 - LLM-based extraction (Groq LLaMA 3.1) for FNOL field parsing
@@ -239,6 +237,7 @@ All business decisions remain rule-driven for explainability and safety.
 - fasttrack_fnol.txt → Damage < 25,000 → Fast-track
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
+
 
 
 
