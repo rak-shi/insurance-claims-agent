@@ -173,3 +173,52 @@ Copy code
 - No missing fields detected during validation
 - Incident description contains fraud-related keywords (e.g., inconsistent, staged)
 - Claim automatically routed to Investigation Flag for further review using deterministic rules
+
+## 🧾 Sample Execution & Output – Manual Review (Blank / ACORD PDF)
+
+### Command Executed
+
+```bash
+python main.py "sample fnol/ACORD-Automobile-Loss-Notice-12.05.16.pdf"
+```
+Output (JSON)
+```
+{
+  "extractedFields": {
+    "policy_number": "POLICY NUMBER",
+    "policyholder_name": "INSURED NAME OF INSURED (First, Middle, Last)",
+    "effective_dates": null,
+    "incident_date": null,
+    "incident_time": null,
+    "incident_location": "LOCATION OF LOSS",
+    "incident_description": "DESCRIPTION OF ACCIDENT",
+    "claimant": "INSURED NAME OF INSURED (First, Middle, Last)",
+    "third_parties": null,
+    "contact_details": {
+      "Name": "CONTACT NAME OF CONTACT (First, Middle, Last)",
+      "Phone": "CONTACT PHONE #",
+      "Email": "PRIMARY E-MAIL ADDRESS"
+    },
+    "asset_type": "VEHICLE",
+    "asset_id": "VEH #",
+    "estimated_damage": "ESTIMATE AMOUNT",
+    "claim_type": null,
+    "attachments": null,
+    "initial_estimate": null
+  },
+  "missingFields": [
+    "incident_date",
+    "claim_type",
+    "attachments",
+    "initial_estimate"
+  ],
+  "recommendedRoute": "Manual Review",
+  "reasoning": "Mandatory FNOL fields are missing."
+}
+```
+### Explanation
+- Document is a blank / template-style ACORD PDF
+- Several mandatory FNOL fields are missing or unfilled
+- Validation agent correctly detected missing fields
+- Claim routed to Manual Review to prevent unsafe automation
+- Demonstrates safe handling of incomplete FNOLs
