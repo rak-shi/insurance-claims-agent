@@ -56,24 +56,8 @@ Structured JSON Output
 ---
 
 ## 📂 Project Structure
+<img width="652" height="705" alt="image" src="https://github.com/user-attachments/assets/c6198eea-d8e5-4994-949e-f3558810be44" />
 
-insurance-claims-agent/
-│
-├── sample fnol/
-│ ├── manual_review_fnol.txt
-│ ├── fasttrack_fnol.txt
-│ ├── injury_fnol.txt
-│ ├── investigation_fnol.txt
-│ └── ACORD-Automobile-Loss-Notice-12.05.16.pdf
-│
-├── extractor.py
-├── llm_extractor.py
-├── validator.py
-├── router.py
-├── main.py
-├── requirements.txt
-├── README.md
-└── .env
 
 ---
 
@@ -267,6 +251,7 @@ All business decisions remain rule-driven for explainability and safety.
 - fasttrack_fnol.txt → Damage < 25,000 → Fast-track
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
+
 
 
 
