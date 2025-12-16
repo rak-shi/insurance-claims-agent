@@ -132,3 +132,44 @@ Copy code
 - No missing fields detected during validation
 - Claim type identified as injury
 - Automatically routed to Specialist Queue based on deterministic rules
+
+## 🧾 Sample Execution & Output – Investigation Flag (Fraud Indicators)
+
+### ▶️ Command Executed
+
+```bash
+python main.py "sample fnol/investigation_fnol.txt"
+```
+ Output (JSON)
+ ```
+json
+Copy code
+{
+  "extractedFields": {
+    "policy_number": "AUTO99999",
+    "policyholder_name": "Rahul Verma",
+    "effective_dates": "03/01/2024 - 03/01/2025",
+    "incident_date": "07/20/2024",
+    "incident_time": "11:15 PM",
+    "incident_location": "Delhi",
+    "incident_description": "Accident circumstances appear inconsistent and possibly staged. Damage pattern does not match description.",
+    "claimant": "Rahul Verma",
+    "third_parties": "Unknown vehicle",
+    "contact_details": "9988776655",
+    "asset_type": "Automobile",
+    "asset_id": "DL8CAF12345678901",
+    "estimated_damage": "60000",
+    "claim_type": "automobile",
+    "attachments": "claim_form.pdf",
+    "initial_estimate": "60000"
+  },
+  "missingFields": [],
+  "recommendedRoute": "Investigation Flag",
+  "reasoning": "Potential fraud indicators detected."
+}
+```
+###  Explanation
+- All mandatory FNOL fields were successfully extracted
+- No missing fields detected during validation
+- Incident description contains fraud-related keywords (e.g., inconsistent, staged)
+- Claim automatically routed to Investigation Flag for further review using deterministic rules
