@@ -110,16 +110,15 @@ insurance-claims-agent/
 
 ```mermaid
 flowchart TD
-    A[FNOL Documents<br/>(PDF / TXT)]
-    B[Text Extraction Layer<br/>• PDF parsing<br/>• TXT ingestion]
-    C[LLM Extraction Agent<br/>(Groq – LLaMA 3.1)<br/>• Semantic field extraction<br/>• FNOL understanding]
-    D[Validation Agent<br/>• Mandatory field checks<br/>• Missing data detection]
-    E[Routing Agent (Deterministic Rules)<br/>• Fast-track<br/>• Manual Review<br/>• Specialist Queue<br/>• Investigation Flag]
-    F[JSON Output<br/>• Extracted Fields<br/>• Missing Fields<br/>• Recommended Route<br/>• Reasoning]
+    A[FNOL Documents\nPDF and TXT]
+    B[Text Extraction Layer\nPDF parsing\nTXT ingestion]
+    C[LLM Extraction Agent\nGroq LLaMA 3.1\nSemantic field extraction\nFNOL understanding]
+    D[Validation Agent\nMandatory field checks\nMissing data detection]
+    E[Routing Agent\nDeterministic Rules\nFast-track\nManual Review\nSpecialist Queue\nInvestigation Flag]
+    F[JSON Output\nExtracted Fields\nMissing Fields\nRecommended Route\nReasoning]
 
     A --> B --> C --> D --> E --> F
 ```
-
 
 ## 📌 Why This Is Excellent for Assessment
 
@@ -268,6 +267,7 @@ All business decisions remain rule-driven for explainability and safety.
 - fasttrack_fnol.txt → Damage < 25,000 → Fast-track
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
+
 
 
 
