@@ -1,0 +1,20 @@
+Policy Number: AUTO67890
+Policyholder Name: Priya Sharma
+Effective Dates: 05/01/2024 - 05/01/2025
+
+Incident Date: 09/01/2024
+Incident Time: 7:45 PM
+Incident Location: Hyderabad, TS
+Incident Description: Vehicle skidded on wet road causing minor collision. Driver sustained injuries.
+
+Claimant: Priya Sharma
+Third Parties: None
+Contact Details: 9123456780
+
+Asset Type: Automobile
+Asset ID: MA3EUA12S00765432
+Estimated Damage: 40000
+
+Claim Type: injury
+Attachments: medical_report.pdf
+Initial Estimate: 40000

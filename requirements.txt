@@ -1,0 +1,5 @@
+pdfplumber
+pydantic
+regex
+groq
+python-dotenv
