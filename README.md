@@ -132,12 +132,13 @@ python -m venv venv
 
 ```
 Activate (Windows):
-
+```
 venv\Scripts\activate
-
+```
 3️⃣ Install Dependencies
+```
 pip install -r requirements.txt
-
+```
 4️⃣ Configure Environment Variables
 ```
 Create a .env file in the project root:
@@ -147,22 +148,27 @@ GROQ_API_KEY=your_groq_api_key_here
 ▶️ Running the Agent (Exact Commands)
 
 ⚠️ The folder name contains a space (sample fnol), so paths must be wrapped in quotes.
-
+```
 🔹 Manual Review (Missing Fields)
 python main.py "sample fnol/manual_review_fnol.txt"
-
+```
+```
 🔹 Fast-track Claim
 python main.py "sample fnol/fasttrack_fnol.txt"
-
+```
+```
 🔹 Specialist Queue (Injury Claim)
 python main.py "sample fnol/injury_fnol.txt"
-
+```
+```
 🔹 Investigation Flag (Fraud Indicators)
 python main.py "sample fnol/investigation_fnol.txt"
-
+```
+```
 🔹 Blank ACORD PDF
 python main.py "sample fnol/ACORD-Automobile-Loss-Notice-12.05.16.pdf"
-
+```
+```
 📤 Output Format
 {
   "extractedFields": {},
@@ -170,6 +176,7 @@ python main.py "sample fnol/ACORD-Automobile-Loss-Notice-12.05.16.pdf"
   "recommendedRoute": "Fast-track",
   "reasoning": "Estimated damage below 25,000."
 }
+```
 
 🧪 Demo FNOL Files
 FNOL File	Expected Route
@@ -232,5 +239,6 @@ All business decisions remain rule-driven for explainability and safety.
 - fasttrack_fnol.txt → Damage < 25,000 → Fast-track
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
+
 
 
