@@ -1,6 +1,6 @@
-# 🧠 Autonomous Insurance Claims Processing Agent
+# Autonomous Insurance Claims Processing Agent
 
-## 📌 Overview
+##  Overview
 
 This project implements a **lightweight autonomous insurance claims processing agent** that automates the early stages of claim handling using AI agents and deterministic business rules.
 
@@ -21,7 +21,7 @@ Build an autonomous agent that can:
 
 ---
 
-## 🧠 High-Level Architecture
+## High-Level Architecture
 
 FNOL Document (PDF / TXT)
 ↓
@@ -36,7 +36,7 @@ Structured JSON Output
 
 ---
 
-## 🔑 Design Principle
+##  Design Principle
 
 - LLM is used **only for information extraction**
 - All business decisions are **rule-based**
@@ -44,14 +44,14 @@ Structured JSON Output
 
 ---
 
-## 🧩 Features
+##  Features
 
-- 📄 Supports PDF and TXT FNOL documents  
-- 🤖 LLM-powered semantic extraction using Groq  
-- ✅ Mandatory field validation  
-- 🧭 Deterministic claim routing  
-- 📝 Explainable decision output  
-- 🛑 Safe handling of incomplete or blank FNOLs  
+- Supports PDF and TXT FNOL documents  
+- LLM-powered semantic extraction using Groq  
+- Mandatory field validation  
+- Deterministic claim routing  
+- Explainable decision output  
+- Safe handling of incomplete or blank FNOLs  
 
 ---
 
@@ -61,7 +61,7 @@ Structured JSON Output
 
 ---
 
-## 📑 Fields Extracted from FNOL
+## Fields Extracted from FNOL
 
 ### Policy Information
 - Policy Number  
@@ -191,7 +191,7 @@ python main.py "sample fnol/ACORD-Automobile-Loss-Notice-12.05.16.pdf"
   "reasoning": "Estimated damage below 25,000."
 }
 ```
-## 🧪 Demo FNOL Files
+## Demo FNOL Files
 
 | FNOL File | Expected Route |
 |---------|---------------|
@@ -252,7 +252,7 @@ All business decisions remain rule-driven for explainability and safety.
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
 
-## 📊 Outputs & Execution Results
+##  Outputs & Execution Results
 
 All sample executions and JSON outputs for different FNOL scenarios are documented in  
 📁 **[`Outputs.md`](./Outputs.md)**.
@@ -270,7 +270,7 @@ The outputs demonstrate the following system behaviors:
 - Clear, explainable reasoning for each routing decision  
 - Safe fallback to manual review when automation confidence is insufficient  
 
-> This separation keeps the README concise while ensuring full transparency and reproducibility through `Outputs.md`.
+
 
 
 
