@@ -106,56 +106,20 @@ insurance-claims-agent/
 - Initial Estimate  
 
 ---
-## 🏗️ Architecture Diagram (Markdown-Safe)
+## 🏗️ Architecture Diagram (Mermaid)
 
-┌─────────────────────────────┐
-│ FNOL Documents │
-│ (PDF / TXT) │
-└──────────────┬──────────────┘
-│
-▼
-┌─────────────────────────────┐
-│ Text Extraction Layer │
-│ - PDF parsing │
-│ - TXT ingestion │
-└──────────────┬──────────────┘
-│
-▼
-┌─────────────────────────────┐
-│ LLM Extraction Agent │
-│ (Groq – LLaMA 3.1) │
-│ - Semantic field extraction│
-│ - FNOL understanding │
-└──────────────┬──────────────┘
-│
-▼
-┌─────────────────────────────┐
-│ Validation Agent │
-│ - Mandatory field checks │
-│ - Missing data detection │
-└──────────────┬──────────────┘
-│
-▼
-┌─────────────────────────────┐
-│ Routing Agent │
-│ (Deterministic Rules) │
-│ - Fast-track │
-│ - Manual Review │
-│ - Specialist Queue │
-│ - Investigation Flag │
-└──────────────┬──────────────┘
-│
-▼
-┌─────────────────────────────┐
-│ JSON Output │
-│ - Extracted Fields │
-│ - Missing Fields │
-│ - Recommended Route │
-│ - Reasoning │
-└─────────────────────────────┘
+```mermaid
+flowchart TD
+    A[FNOL Documents<br/>(PDF / TXT)]
+    B[Text Extraction Layer<br/>• PDF parsing<br/>• TXT ingestion]
+    C[LLM Extraction Agent<br/>(Groq – LLaMA 3.1)<br/>• Semantic field extraction<br/>• FNOL understanding]
+    D[Validation Agent<br/>• Mandatory field checks<br/>• Missing data detection]
+    E[Routing Agent (Deterministic Rules)<br/>• Fast-track<br/>• Manual Review<br/>• Specialist Queue<br/>• Investigation Flag]
+    F[JSON Output<br/>• Extracted Fields<br/>• Missing Fields<br/>• Recommended Route<br/>• Reasoning]
 
+    A --> B --> C --> D --> E --> F
+```
 
----
 
 ## 📌 Why This Is Excellent for Assessment
 
@@ -304,6 +268,7 @@ All business decisions remain rule-driven for explainability and safety.
 - fasttrack_fnol.txt → Damage < 25,000 → Fast-track
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
+
 
 
 
