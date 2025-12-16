@@ -90,3 +90,45 @@ python main.py "sample fnol/fasttrack_fnol.txt"
 - Estimated damage is below ₹25,000
 
 - Claim automatically routed to Fast-track using deterministic rules
+  
+
+## 🧾 Sample Execution & Output – Injury Claim
+
+### ▶️ Command Executed
+
+```bash
+python main.py "sample fnol/injury_fnol.txt"
+```
+📤 Output (JSON)
+```
+json
+Copy code
+{
+  "extractedFields": {
+    "policy_number": "AUTO67890",
+    "policyholder_name": "Priya Sharma",
+    "effective_dates": "05/01/2024 - 05/01/2025",
+    "incident_date": "09/01/2024",
+    "incident_time": "7:45 PM",
+    "incident_location": "Hyderabad, TS",
+    "incident_description": "Vehicle skidded on wet road causing minor collision. Driver sustained injuries.",
+    "claimant": "Priya Sharma",
+    "third_parties": "None",
+    "contact_details": "9123456780",
+    "asset_type": "Automobile",
+    "asset_id": "MA3EUA12S00765432",
+    "estimated_damage": "40000",
+    "claim_type": "injury",
+    "attachments": "medical_report.pdf",
+    "initial_estimate": "40000"
+  },
+  "missingFields": [],
+  "recommendedRoute": "Specialist Queue",
+  "reasoning": "Injury-related claim."
+}
+```
+### Explanation
+- All mandatory FNOL fields were successfully extracted
+- No missing fields detected during validation
+- Claim type identified as injury
+- Automatically routed to Specialist Queue based on deterministic rules
