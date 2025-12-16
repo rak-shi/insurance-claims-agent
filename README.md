@@ -240,6 +240,7 @@ It represents a lightweight textual counterpart to enterprise multi-agent system
 ```bash
 python main.py "sample fnol/manual_review_fnol.txt"
 ```
+```
 {
   "extractedFields": {
     "policy_number": "PN12345",
@@ -272,6 +273,7 @@ python main.py "sample fnol/manual_review_fnol.txt"
   "reasoning": "Standard processing applicable."
 }
 
+```
 
 ## 🎤 One-Line Summary
 
@@ -290,6 +292,7 @@ All business decisions remain rule-driven for explainability and safety.
 - fasttrack_fnol.txt → Damage < 25,000 → Fast-track
 - injury_fnol.txt → Injury claim → Specialist Queue
 - investigation_fnol.txt → Fraud keywords → Investigation Flag
+
 
 
 
