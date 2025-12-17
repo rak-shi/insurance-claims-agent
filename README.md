@@ -23,6 +23,7 @@ Build an autonomous agent that can:
 
 ## High-Level Architecture
 
+```mermaid
 FNOL Document (PDF / TXT)
 ↓
 LLM-Based Extraction Agent (Groq)
@@ -33,7 +34,7 @@ Routing Agent (Deterministic Rules)
 ↓
 Structured JSON Output
 
-
+```
 ---
 
 ##  Design Principle
@@ -269,6 +270,7 @@ The outputs demonstrate the following system behaviors:
   - **Manual Review** for blank or incomplete FNOLs  
 - Clear, explainable reasoning for each routing decision  
 - Safe fallback to manual review when automation confidence is insufficient  
+
 
 
 
