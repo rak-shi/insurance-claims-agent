@@ -102,8 +102,6 @@ python main.py "sample fnol/injury_fnol.txt"
 ```
 📤 Output (JSON)
 ```
-json
-Copy code
 {
   "extractedFields": {
     "policy_number": "AUTO67890",
@@ -143,8 +141,6 @@ python main.py "sample fnol/investigation_fnol.txt"
 ```
  Output (JSON)
  ```
-json
-Copy code
 {
   "extractedFields": {
     "policy_number": "AUTO99999",
